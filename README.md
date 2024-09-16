@@ -3,8 +3,8 @@
 TheTestingAcademy - https://sdet.live
 #Framework consist of:-
 
--Java 20
--TestNG
--Maven
--Selenium
--Allure Reports
+- Java 20
+- TestNG
+- Maven
+- Selenium
+- Allure Reports
