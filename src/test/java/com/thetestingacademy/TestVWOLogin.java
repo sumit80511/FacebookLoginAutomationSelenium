@@ -27,7 +27,7 @@ public class TestVWOLogin {
 
     }
 
-    @Test
+    @Test(priority = 1, groups = {"negative", "sanity", "reg"})
     @Severity(SeverityLevel.BLOCKER)
     @Description("TC#1-Verify that with invalid username and valid password, Login is not successful !!")
     public void TestInvalidLogin() throws InterruptedException {
@@ -42,7 +42,7 @@ public class TestVWOLogin {
         Assert.assertEquals(driver.getCurrentUrl(),"https://www.facebook.com/recover/initiate/?lara_product=www_first_password_failure");
     }
 
-    @Test
+    @Test(enabled = true, priority = 2, groups = {"positive", "sanity", "stage"})
     @Description("TC#2-Verify that with valid username and valid password, Login is successful !!")
     public void TestvalidLogin() throws InterruptedException {
         driver.get("https://www.facebook.com/login/");
@@ -52,7 +52,7 @@ public class TestVWOLogin {
         Thread.sleep(2000);
 
         //Assertion- checking Actual result=Expected result
-        Assert.assertEquals(driver.getTitle(),"Facebook");
+        Assert.assertEquals(driver.getCurrentUrl(),("https://www.facebook.com/"));
 
 
     }
